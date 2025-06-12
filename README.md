@@ -1,4 +1,4 @@
-Smart Compliance Scheduler
+# Smart Compliance Scheduler
 
 A modern web application to help compliance professionals track and manage their tasks efficiently.
 
