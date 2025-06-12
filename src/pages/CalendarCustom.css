@@ -1,0 +1,189 @@
+/* CalendarCustom.css */
+
+/* Base calendar styles */
+.rbc-calendar {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+/* Toolbar */
+.rbc-toolbar {
+  background: transparent;
+  border: none;
+  margin-bottom: 16px;
+}
+.rbc-toolbar-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Header */
+.rbc-header {
+  background: transparent;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.rbc-today {
+  background: #e3f2fd !important;
+}
+.rbc-off-range-bg {
+  background: #f5f5f5 !important;
+}
+
+/* Month/Week/Day/Agenda containers */
+.rbc-month-view,
+.rbc-time-view,
+.rbc-agenda-view,
+.rbc-week-view {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Time slots */
+.rbc-time-slot {
+  border-top: 1px solid #f0f0f0;
+}
+.rbc-timeslot-group {
+  min-height: 50px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Time gutter */
+.rbc-time-gutter {
+  background: #fafafa;
+  color: #888;
+  font-size: 0.9rem;
+  border-right: 1px solid #ddd;
+  padding-right: 8px;
+}
+
+/* Agenda view */
+.rbc-agenda-view {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 12px 0;
+}
+.rbc-agenda-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+}
+.rbc-agenda-table thead th {
+  background: #e3f2fd;
+  color: #1976d2;
+  font-weight: 700;
+  font-size: 1rem;
+  border-bottom: 2px solid #bbdefb;
+  padding: 10px 12px;
+  text-align: left;
+}
+.rbc-agenda-table tbody td {
+  background: #fafcff !important;
+  color: #333;
+  font-size: 0.98rem;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+.rbc-agenda-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.rbc-agenda-date-cell,
+.rbc-agenda-time-cell {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 0.97rem;
+}
+.rbc-agenda-event-cell {
+  font-weight: 500;
+  color: #1976d2;
+}
+.rbc-agenda-table tbody tr:hover td {
+  background: #e3f2fd !important;
+  transition: background 0.2s;
+}
+
+/* Event appearance */
+.rbc-event,
+.rbc-day-slot .rbc-event,
+.rbc-time-slot .rbc-event {
+  background: #1976d2 !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: none !important;
+}
+
+/* Hover effect */
+.rbc-event:hover {
+  background: #1565c0 !important;
+}
+
+/* Prevent overlapping */
+.rbc-day-slot .rbc-event,
+.rbc-time-slot .rbc-event {
+  left: 5% !important;
+  right: 5% !important;
+  min-height: 36px !important;
+  max-width: 90% !important;
+}
+
+/* Month view event layout */
+.rbc-month-view .rbc-row-segment {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.rbc-month-view .rbc-event-content {
+  overflow: visible !important;
+}
+
+/* Hide time label in week/day views */
+.rbc-event-label {
+  display: none;
+}
+
+/* Selected cell */
+.rbc-selected {
+  background: #e8f4fd !important;
+  border-radius: 8px !important;
+}
+
+/* Make month view events transparent and remove default border */
+.rbc-month-view .rbc-event,
+.rbc-month-view .rbc-day-slot .rbc-event {
+  background: transparent !important;
+  color: inherit !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Make all event backgrounds and borders transparent so custom capsule shows in all views */
+.rbc-event,
+.rbc-day-slot .rbc-event,
+.rbc-time-slot .rbc-event,
+.rbc-month-view .rbc-event,
+.rbc-month-view .rbc-day-slot .rbc-event {
+  background: transparent !important;
+  color: inherit !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
