@@ -65,7 +65,7 @@ comply-scheduler/
 
 1. **Clone the repository**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/Harshavardhan-Sondakar/Calendar-Frontend.git
    cd comply-scheduler
    ```
 
