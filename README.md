@@ -98,7 +98,7 @@ comply-scheduler/
    ```sh
    cd server
    npm run start
-   # or for development with auto-reload:
+   # or 
    npm run dev
    ```
 
