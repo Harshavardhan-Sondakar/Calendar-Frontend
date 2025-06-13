@@ -217,59 +217,52 @@ function Calendar() {
 
 
   const CustomAgendaEvent = ({ event }) => (
-    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, py: 1 }}>
-      <Box
-        sx={{
-          width: 6,
-          height: 18,
-          borderRadius: 2,
-          background:
-            event.status === 'Complete'
-              ? '#2e7d32'
-              : event.status === 'Over Due'
-              ? '#d32f2f'
-              : '#1976d2',
-          mr: 1,
-        }}
-      />
-      <Typography variant="body2" sx={{ fontWeight: 600 }}>
-        {event.title}
-      </Typography>
-      <Chip
-        label={event.status}
-        size="small"
-        sx={{
-          backgroundColor:
-            event.status === 'Complete'
-              ? '#e0f7fa'
-              : event.status === 'Over Due'
-              ? '#ffebee'
-              : '#e3f2fd',
-          color:
-            event.status === 'Complete'
-              ? '#2e7d32'
-              : event.status === 'Over Due'
-              ? '#d32f2f'
-              : '#1976d2',
-          fontWeight: 500,
-        }}
-      />
-      <Typography variant="body2" sx={{ color: 'text.secondary', ml: 1 }}>
-        {event.description}
-      </Typography>
+    <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1, py: 1 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Typography variant="body2" sx={{ fontWeight: 600 }}>
+            {event.title}
+          </Typography>
+          <Chip
+            label={event.status}
+            size="small"
+            sx={{
+              backgroundColor:
+                event.status === 'Complete'
+                  ? '#e0f7fa'
+                  : event.status === 'Over Due'
+                  ? '#ffebee'
+                  : '#e3f2fd',
+              color:
+                event.status === 'Complete'
+                  ? '#2e7d32'
+                  : event.status === 'Over Due'
+                  ? '#d32f2f'
+                  : '#1976d2',
+              fontWeight: 500,
+              border: 'none',
+            }}
+          />
+        </Box>
+        {event.description && (
+          <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>
+            {event.description}
+          </Typography>
+        )}
+      </Box>
     </Box>
   );
 
   return (
     <Container maxWidth="xl">
       <Paper
-        elevation={3}
+        elevation={1}
         sx={{
           p: { xs: 1, sm: 3 },
           mt: 4,
           background: 'linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%)',
-          borderRadius: 4,
-          boxShadow: 4,
+          borderRadius: 2,
+          boxShadow: 1,
           minHeight: '80vh',
         }}
       >
