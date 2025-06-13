@@ -45,7 +45,6 @@ function Calendar() {
 
   useEffect(() => {
     fetchEvents();
-    // eslint-disable-next-line
   }, []);
 
   const fetchEvents = async () => {
@@ -73,7 +72,6 @@ function Calendar() {
     }
   };
 
-  // Add this handler for navigation
   const handleNavigate = (newDate) => {
     setDate(newDate);
   };
@@ -107,7 +105,7 @@ function Calendar() {
     };
   };
 
-  // Custom event component for all views (pill style)
+
   const CustomEvent = ({ event }) => (
     <Tooltip
       title={

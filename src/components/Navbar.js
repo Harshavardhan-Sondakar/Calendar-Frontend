@@ -49,7 +49,6 @@ function Navbar() {
         }}
       >
         <Toolbar sx={{ minHeight: 72, px: { xs: 1, sm: 4 } }}>
-          {/* Logo */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography
               variant="h5"
@@ -65,10 +64,7 @@ function Navbar() {
             </Typography>
           </Box>
 
-          {/* Spacer */}
           <Box sx={{ flex: 1 }} />
-
-          {/* Centered Menu Items (Desktop only) */}
           {!isMobile && (
             <Box
               sx={{
